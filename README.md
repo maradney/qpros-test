@@ -30,6 +30,10 @@ I left the file I used as an example in the repo but you need to download your o
 - [Find selenuim-manager here](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager)
 - [More about selenuim-manager](https://www.selenium.dev/blog/2022/introducing-selenium-manager/)
 
+Also, I'm using firefox so I recommend having it installed and updated.
+
+If you want to use chrome for example make sure it's installed and updated and set `SE_BROWSER=chrome` in your `.env` file.
+
 ## Important
 Make sure the downloaded `selenuim-manager` file is executable.
 

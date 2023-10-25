@@ -11,7 +11,7 @@ export async function GET(request: Request) {
   };
   try {
     const driver = await (new Builder()
-      .forBrowser(Browser.FIREFOX)
+      .forBrowser(process.env.SE_BROWSER || Browser.FIREFOX)
       .build());
     try {
       await runTestSteps(driver);
