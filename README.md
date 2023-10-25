@@ -22,7 +22,9 @@ You should find a button and a disabled input that displays the status.
 
 ## Setting up selenium
 Right now clicking the button will show an error, You need to set a `.env` file in project root and set ```SE_MANAGER_PATH``` value to an executable `selenium-manager` file.
+
 ex: `SE_MANAGER_PATH=/Users/user/Sandbox/qpros-test/bin/macos/selenium-manager/selenium-manager`
+
 I left the file I used as an example in the repo but you need to download your own depending on the OS you're using.
 
 - [Find selenuim-manager here](https://github.com/SeleniumHQ/selenium/tree/trunk/common/manager)
@@ -30,4 +32,5 @@ I left the file I used as an example in the repo but you need to download your o
 
 ## Important
 Make sure the downloaded `selenuim-manager` file is executable.
+
 For macos it's as simple as running `chmod 755` to the file and `xattr -d com.apple.quarantine <name-of-executable>` in case it's showing "Developer can't be verified error".
