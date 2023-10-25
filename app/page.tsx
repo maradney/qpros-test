@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Flex, Heading, TextField, Button, Theme } from '@radix-ui/themes';
 import { IconAlertHexagon, IconCheck, IconRotateClockwise2 } from '@tabler/icons-react';
 import '@radix-ui/themes/styles.css';
@@ -21,7 +21,7 @@ export default function Home() {
     return <IconCheck height="16" width="16" />;
   }, [status, loading]);
 
-  const handleButtonClick = () => {
+  const handleButtonClick = useCallback(() => {
     setLoading(true);
     fetch('/api/test')
       .then(async (res) => {
@@ -42,7 +42,7 @@ export default function Home() {
       .finally(() => {
         setLoading(false);
       });
-  };
+  }, [setLoading, setMessage, setStatus]);
 
   return (
     <Theme appearance="dark">
